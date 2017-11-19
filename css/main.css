@@ -1,0 +1,681 @@
+* {
+    margin: 0px;
+}
+
+BODY {
+    height: 100%;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+#layout {
+    display: none;
+}
+
+.wrapper {
+    min-height: 600px; /*460px;*/
+    min-width: 620px;
+    position: absolute;
+    overflow: hidden;
+    display: table;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.scene,
+.layer {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.scene {
+    min-height: 460px;
+    position: relative;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+}
+
+.layer div {    
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.background {
+    background: url(../img/i/background1.jpg) no-repeat 50% 100%;
+    background-size: cover;
+    width: 120%;
+    position: absolute;
+    bottom: 41%;
+    left: -10%;
+    top: -6%;
+}
+
+.flying-objects {
+    background: url(../img/i/flying-objects.png) no-repeat center 100%;
+    background-size: contain;
+    width: 100%;
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    margin-left: -50%;
+    height: 312px;
+}
+
+.castle {
+    background: url(../img/i/castle.png) no-repeat 50% 100%;
+    width: 1072px;
+    height: 537px;
+    position: absolute;
+    right: 5.8%;
+    bottom: 31%;
+}
+
+.man1 {
+    background: url(../img/i/man1.png) no-repeat 50% 100%;
+    background-size: cover;
+    width: 882px;
+    height: 768px;
+    position: absolute;
+    left: -4.3%;
+    top: -21%;
+}
+
+.man2 {
+    background: url(../img/i/man2.png) no-repeat 50% 100%;
+    background-size: cover;
+    width: 513px;
+    height: 409px;
+    position: absolute;
+    right: 4.2%;
+    top: -12.3%;
+}
+
+.man3 {
+    background: url(../img/i/man3.png) no-repeat 50% 100%;
+    background-size: cover;
+    width: 103px;
+    height: 233px;
+    position: absolute;
+    right: 41%;
+    top: 30%;
+}
+
+.scale-1 {
+    transform: scale(0.76);
+    -webkit-transform: scale(0.76);
+    -o-transform: scale(0.76);
+    -moz-transform: scale(0.76);
+}
+
+.ground {
+    background: url(../img/i/ground1.png) no-repeat 50% 100%;
+    background-size: cover;
+    width: 120%;
+    position: absolute;
+    left: -12%;
+    bottom: 9%;
+    top: -1%;
+}
+
+.grass {
+    background: url(../img/i/bg_1.png) no-repeat 50% 100%;
+    background-size: cover;
+    width: 110%;
+    position: absolute;
+    left: -5%;
+    bottom: -10%;
+    top: 57%;
+}
+
+.smoke-brown {
+    position: absolute;
+    left: -9%;
+    bottom: 2%;
+    width: 1029px;
+    height: 331px;
+    background: url(../img/i/smoke-brown.png) no-repeat 50% 100%;
+    background-size: contain;
+}
+
+.smoke-green {
+    position: absolute;
+    right: -16%;
+    bottom: 10%;
+    width: 1223px;
+    height: 375px;
+    background: url(../img/i/smoke-green1.png) no-repeat 50% 100%;
+    background-size: contain;
+}
+
+.smoke-purple {
+    position: absolute;
+    left: -24%;
+    bottom: 14%;
+    width: 1049px;
+    height: 346px;
+    background: url(../img/i/smoke-purple.png) no-repeat 50% 100%;
+    background-size: contain;
+}
+
+.smoke-blue {
+    border 1px solid red;
+    position: absolute;
+    right: -30%;
+    bottom: -6%;
+    width: 981px;
+    height: 794px;
+    background: url(../img/i/smoke-blue.png) no-repeat 50% 100%;
+    background-size: contain;
+}
+
+.logo {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin: -12% 0 0 -12%;
+    width: 24%;
+    height: 24%;
+    background: url(../img/i/logo3.png) no-repeat center 0;
+    background-size: contain;
+}
+
+.blur {
+    background: url('../img/i/blur.png') no-repeat center 0;
+    width: 552px;
+    height: 327px;
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    margin-left: -276px;
+    z-index: 0;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+@media all and (max-width: 1360px) {
+    .man1 {
+        left: -6.3%;
+        top: -21%;
+    }
+
+    .man2 {
+        right: 3.2%;
+        top: -17.3%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.61);
+        -o-transform: scale(0.61);
+        -moz-transform: scale(0.61);
+        transform: scale(0.61);
+    }
+
+    .castle {
+        right: 0%;
+        bottom: 24%;
+    }
+}
+
+@media all and (max-width: 1250px) {
+    .man1 {
+        left: -10.5%;
+        top: -20%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.59);
+        -o-transform: scale(0.59);
+        -moz-transform: scale(0.59);
+        transform: scale(0.59);
+    }
+
+    .castle {
+        right: -2%;
+        bottom: 22%;
+    }
+}
+
+@media all and (max-width: 1170px) {
+    .man1 {
+        left: -16.3%;
+        top: -25%;
+    }
+
+    .smoke-purple {
+        bottom: 9%;
+    }
+
+    .smoke-green {
+        right: -18%;
+        bottom: 6%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.57);
+        -o-transform: scale(0.57);
+        -moz-transform: scale(0.57);
+        transform: scale(0.57);
+    }
+
+    .castle {
+        right: -5%;
+        bottom: 20%;
+    }
+}
+
+@media all and (max-width: 1065px) {
+    .man1 {
+        left: -25%;
+    }
+
+    .man2 {
+        right: -3%;
+        top: -18%;
+    }
+
+    .castle {
+        right: -10%;
+        bottom: 16%;
+    }
+
+    .smoke-purple {
+        bottom: 7%;
+        left: -35%;
+    }
+
+    .smoke-green {
+        right: -38%;
+        bottom: 4%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.56);
+        -o-transform: scale(0.56);
+        -moz-transform: scale(0.56);
+        transform: scale(0.56);
+    }
+}
+
+@media all and (max-width: 990px) {
+    
+    .man1 {
+        left: -30%;
+    }
+
+    .man2 {
+        right: -10%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.55);
+        -o-transform: scale(0.55);
+        -moz-transform: scale(0.55);
+        transform: scale(0.55);
+    }
+}
+
+@media all and (max-width: 890px) {
+    
+    .man1 {
+        left: -37%;
+        top: -27%;
+    }
+
+    .man2 {
+        right: -13%;
+        top: -23%;
+    }
+
+    .castle {
+        right: -23%;
+        bottom: 16%;
+    }
+
+    .smoke-purple {
+        left: -40%;
+    }
+
+    .smoke-green {
+        right: -43%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.54);
+        -o-transform: scale(0.54);
+        -moz-transform: scale(0.54);
+        transform: scale(0.54);
+    }
+}
+
+@media all and (max-width: 800px) {
+    .man1 {
+        left: -37%;
+        top: -26%;
+    }
+
+    .man2 {
+        right: -13%;
+        top: -19%;
+    }
+
+    .castle {
+        right: -28%;
+        bottom: 17%;
+    }
+
+    .smoke-purple {
+        left: -52%;
+        bottom: 3%;
+    }
+
+    .smoke-green {
+        right: -70%;
+        bottom: -3%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.53);
+        -o-transform: scale(0.53);
+        -moz-transform: scale(0.53);
+        transform: scale(0.53);
+    }
+}
+
+@media all and (max-width: 750px) {
+   
+    .man1 {
+        left: -46%;
+        top: -28%;
+    }
+
+    .man2 {
+        right: -14%;
+        top: -21%;
+    }
+
+    .castle {
+        right: -34%;
+        bottom: 16%;
+    }
+
+    .smoke-purple {
+        left: -55%;
+    }
+
+    .smoke-green {
+        right: -75%;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .logo {
+        top: 30%;
+    }
+
+    .man1 {
+        left: -57%;
+        top: -21%;
+    }
+
+    .man2 {
+        right: -20%;
+        top: -16%;
+    }
+
+    .castle {
+        right: -50%;
+    }
+
+    .smoke-purple {
+        left: -65%;
+    }
+
+    .smoke-green {
+        right: -67%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.52);
+        -o-transform: scale(0.52);
+        -moz-transform: scale(0.52);
+        transform: scale(0.52);
+    }
+}
+
+@media all and (max-width: 650px) {
+    .scale-1 {
+        -webkit-transform: scale(0.50);
+        -o-transform: scale(0.50);
+        -moz-transform: scale(0.50);
+        transform: scale(0.50);
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .man1 {
+        left: -4%;
+        top: -20%;
+    }
+
+    .man2 {
+        right: 7%;
+        top: -10%;
+    }
+
+    .castle {
+        right: 4%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.70);
+        -o-transform: scale(0.70);
+        -moz-transform: scale(0.70);
+        transform: scale(0.70);
+    }
+}
+
+@media all and (min-width: 1500px) {
+    .man1 {
+        left: -5%;
+        top: -18%;
+    }
+
+    .man2 {
+        right: 9%;
+        top: -10%;
+    }
+
+    .castle {
+        right: 5%;
+    }
+}
+
+@media all and (min-width: 1600px) {
+    .man1 {
+        left: 0%;
+        top: -15%;
+    }
+
+    .man2 {
+        right: 11%;
+        top: -10%;
+    }
+
+    .castle {
+        right: 7%;
+        bottom: 32.5%;
+    }
+}
+
+@media all and (min-width: 1700px) {
+    .man1 {
+        left: 2%;
+        top: -11%;
+    }
+
+    .man2 {
+        right: 12%;
+        top: -7%;
+    }
+
+    .castle {
+        right: 8%;
+        bottom: 35%;
+    }
+}
+
+@media all and (min-width: 1800px) {
+    .man1 {
+        left: 4%;
+        top: -9%;
+    }
+
+    .man2 {
+        right: 13%;
+        top: -5%;
+    }
+
+    .castle {
+        right: 8%;
+        bottom: 37%;
+    }
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    
+    .man1 {
+        left: -25%;
+        top: 13%;
+    }
+
+    .man2 {
+        right: 2%;
+        top: 13%;
+    }
+
+    .castle {
+        right: 0%;
+        bottom: 38%;
+    }
+
+    .smoke-purple {
+        left: -23%;
+    }
+
+    .smoke-green {
+        right: -25%;
+        bottom: 13%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(0.98);
+        -o-transform: scale(0.98);
+        -moz-transform: scale(0.98);
+        transform: scale(0.98);
+    }
+
+    .blur {
+        bottom: 25%;
+    }
+
+    .addthis_32x32_style .at15nc.at300bs, .addthis_32x32_style .at15nc.at15t {
+        background: none !important;
+    }
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+   
+    .man1 {
+        left: -3%;
+        top: 6%;
+    }
+
+    .man2 {
+        right: 3%;
+        top: 9%;
+    }
+
+    .castle {
+        right: 5%;
+        bottom: 36%;
+    }
+
+    .smoke-purple {
+        left: -23%;
+    }
+
+    .smoke-green {
+        right: -25%;
+        bottom: 13%;
+    }
+
+    .scale-1 {
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+     .addthis_32x32_style .at15nc.at300bs, .addthis_32x32_style .at15nc.at15t {
+        background: none !important;
+    }
+}
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation: portrait) {
+        .man1 {
+            left: -64%;
+            top: -10%;
+        }
+
+        .man2 {
+            right: -26%;
+            top: 3%;
+        }
+
+        .castle {
+            right: -30%;
+            bottom: 18%;
+        }
+
+        .smoke-purple {
+            left: -63%;
+        }
+
+        .smoke-green {
+            right: -85%;
+            bottom: 10%;
+        }
+
+        .scale-1 {
+            -webkit-transform: scale(0.63);
+            -o-transform: scale(0.63);
+            -moz-transform: scale(0.63);
+            transform: scale(0.63);
+        }
+
+        .blur {
+            bottom: 15%;
+        }       
+}
